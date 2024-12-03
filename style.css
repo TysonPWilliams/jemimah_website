@@ -1,0 +1,533 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+  }
+  
+  body {
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      background-image: url(images/pexels-life-of-pix-8892.jpg);
+      background-size: cover;
+  }
+  header {
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      background-color: #4C5C68;
+  }
+  header > * {
+      width: calc(100% / 3);
+  }
+  .logo img {
+      max-width: 40vw;
+  }
+  .logo img:hover {
+      cursor: pointer;
+  }
+  /* The following code is for a collapsible hamburger navigation menu, courtesy of CodeBurst.io*/
+  .menuContent {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 0 0 25px;
+  }
+  .collapsibleMenu {
+      background-color: #C5C3C6;
+      padding: 0px 10px;
+      border-bottom: 3px solid #1985A1;
+      box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+      font-weight: 600;
+  }
+  .collapsibleMenu ul {
+      padding: 0;
+      font-size: 3vw;
+  }
+  .collapsibleMenu a {
+      display: block;
+      padding: 5px;
+      text-decoration: none;
+      color: #46494c;
+      font-weight: 600;
+  }
+  .collapsibleMenu label {
+      font-size: 3vw;
+      display: inline-block;
+      cursor: pointer;
+      background: url(images/burger-bar.png) no-repeat left center;
+      padding: 10px 0 10px 40px;
+  }
+  input#menu {
+      display: none;
+  }
+  input:checked +label {
+      background-image: url(images/close.png);
+  }
+  input:checked ~ .menuContent {
+      max-height: 100%;
+  }
+  /* End of referenced code courtesy of Codeburst.io */
+  
+  @keyframes enterLeft {
+      from {
+          left: 400px;
+          transform: translate(-300px);
+      }
+      to {
+      }
+  }
+  @keyframes enterRight {
+      from {
+          right: 400px;
+          transform: translate(400px);
+      }
+      to {
+      }
+  }
+  #headings {
+      animation: enterRight 1s;
+  }
+  .heroSection {
+      text-align: center;
+      padding: 5px;
+      background-color: #B1F0F7;
+  }
+  .heroSection .sectionHeadings {
+      text-align: left;
+      padding-left: 10%;
+      font-size: 1.5rem;
+      color: #F6F9FE;
+  }
+  .heroSection ul {
+      text-align: left;
+      padding-left: 10%;
+      color: #C5C3C6;
+  }
+  .heroSection #form {
+      color: #C5C3C6;
+  }
+  #projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+  }
+  #projects img {
+      max-width: 40vw;
+  }
+  .projectRows h3 {
+      color: #F6F9FE;
+      font-size: 5vw;
+      text-align: center;
+  }
+  .projectRows {
+      width: 100%;
+      padding: 10px;
+  }
+  .projectRows:hover {
+      background-color: #1985A1;
+  }
+  h2.sectionHeadings {
+      color: #F6F9FE;
+      padding-top: 2rem;
+      padding-left: 1rem;
+  }
+  .heroSection #employmentList li {
+      margin-top: 10px;
+  } 
+  #heroImage {
+      margin-top: 8%;
+      border-radius: 50%;
+      animation: enterLeft 1s;
+      width: 75%;
+      border: 3px solid #1985A1;
+  }
+  .heroSection h1 {
+      padding-top: 10px;
+      padding-bottom: 5px;
+      color: #F6F9FE;
+      text-shadow: 2px 2px 2px black;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 900;
+  }
+  .heroSection h2 {
+      font-size: 1rem;
+  }
+  .heroSection h3 {
+      margin-top: 10px;
+      font-size: 0.8rem;
+  }
+  #heroButtons {
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+  }
+  #heroButtons button {
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      padding: 10px;
+      border-radius: 24px;
+      cursor: pointer;
+      background-color: #1985A1;
+      font-weight: 600;
+      color: #F6F9FE;
+      margin: 0px 5px 0px 5px;
+  }
+  #heroButtons button:hover {
+      background-color: #F6F9FE;
+      color: #1985A1;
+  }
+  footer .footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      background-color: #4C5C68;
+      height: 120px;
+      width: 100%;
+  }
+  i.fa {
+      font-size: 48px;
+      color: #F6F9FE;
+  }
+  .footer a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+  }
+  .footer a:hover {
+      background-color: #1985A1;    
+  }
+  #indexSummary {
+      font-weight: 600;
+      color: #F6F9FE;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+  }
+  #indexSummary span {
+      color: #81BFDA;
+  }
+  #contactForm {
+      display: grid;
+  }
+  .formSection {
+      margin: 5%;
+  }
+  .formSection #subject, #body, #contactInfo {
+      font-family: "Raleway", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+  }
+  #aboutMe {
+      margin: 5%;
+      width: 90%;
+      text-align: left;
+      color: #F6F9FE;
+      font-weight: 600;
+  }
+  #aboutMe h3 , p {
+      margin: 1rem 0;
+  }
+  #aboutMe h3 {
+      text-shadow: 2px 2px 2px black;
+      font-size: 1.5rem;
+      text-align: center;
+  }
+  #gallery {
+      animation: enterLeft 1s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+  }
+  #gallery img {
+      border: 2px solid #1985A1;
+      width: 80vw;
+      height: 80vw;
+      object-fit: cover;
+      margin: 5px;
+  }
+  i {
+      color: #F6F9FE;
+      font-size: 2rem;
+  }
+  #codingLanguages i {
+      margin-left: 1rem;
+  }
+  .responsiveText {
+      display: none;
+  }
+  label {
+      color: #F6F9FE;
+      margin: 10px;
+  }
+  input, textarea, #formButton {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+  }
+  #formButton {
+      border: none;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+  }
+  #formButton:hover {
+      background-color: #1985A1;
+      color: #F6F9FE;
+  }
+  .footerBottom {
+      background-color: #000;
+      padding: 5px;
+      text-align: center;
+    }
+    
+    .footerBottom p {
+      color: white;
+    }
+    
+    .designer {
+      opacity: 0.7;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 400;
+      margin: 0px 5px;
+    }
+  
+  /* Tablet */
+  @media screen and (min-width: 451px) and (max-width: 1000px){
+      .logo img {
+          max-width: 25vw;
+      }
+      .collapsibleMenu ul {
+          font-size: 2vw;
+      }
+      .collapsibleMenu label {
+          font-size: 2vw;
+      }
+      header {
+          border-bottom: 1px solid #F6F9FE;
+      }
+      footer {
+          border-top: 1px solid #F6F9FE;
+          border-bottom: 1px solid #F6F9FE;
+      }
+      main {
+          display: flex;
+          flex-wrap: wrap;
+      }
+      #contactMain {
+          display: inline-block;
+      }
+      .container:nth-child(1){
+          order: 2;
+      }
+      #indexHero {
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+      }
+      #heroImage {
+          max-width: 100vw;
+  
+      }
+      #headings {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+      }
+      #headings h1 {
+          font-size: 4vw;
+      }
+      #headings h2 {
+          font-size: 3vw;
+      }
+      #headings h3 {
+          font-size: 2vw;
+      }
+      #heroButtons button {
+          font-size: 1.5vw;
+      }
+      #gallery {
+          display: flex;
+      }
+      #gallery img {
+          margin: 0;
+          border: 0;
+          max-width: calc(100%/3);
+          max-height: 33vw;
+      }
+      #aboutMe h3 {
+          font-size: 2.5rem;
+      }
+      .heroSection #mainHeading {
+          font-size: 2.5rem;
+      }
+      #skillsGrid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+      }
+      #skillsGrid div {
+          margin-left: 5vw;
+          margin-right: 5vw;
+      }
+      #projects {
+          display: flex;
+          flex-direction: column;
+      }
+      .projectRows {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          width: 100%;
+      }
+      .projectRows img {
+          width: 50vw;
+      }
+      .responsiveText {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #C5C3C6;
+          margin-top: 1rem;
+      }
+      .responsiveText ul {
+          margin-left: 5vw;
+      }
+      .flexLayout {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }
+      #contactMain #form {
+          color: #F6F9FE;
+          text-align: center;
+      }
+      #mainHeading , #form {
+          text-align: center;
+      }
+      .sectionHeadings {
+          font-size: 2.5rem;
+          text-align: center;
+      }
+      .formSection {
+          margin-left: 20vw;
+          width: 60vw;
+      }
+      section.heroSection {
+          width: 100vw;
+      }
+      .footerBottom {
+          padding: 10px;
+        }
+  }
+  /* Desktop */
+  @media screen and (min-width: 1001px) {
+      .logo img {
+          max-width: 15vw;
+      }
+      .collapsibleMenu ul {
+          font-size: 1.5vw;
+      }
+      .collapsibleMenu label {
+          font-size: 1.5vw;
+      }
+      header {
+          border-bottom: 1px solid #F6F9FE;
+      }
+      footer {
+          border-top: 1px solid #F6F9FE;
+          border-bottom: 1px solid #F6F9FE;
+      }
+      #indexHero {
+          display: grid;
+          grid-template-columns: 3fr 2fr;
+      }
+      #headings {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+      }
+      #headings h1 {
+          font-size: 4vw;
+      }
+      #headings h2 {
+          font-size: 3vw;
+      }
+      #headings h3 {
+          font-size: 2vw;
+      }
+      #heroButtons button {
+          font-size: 1.5vw;
+      }
+      .responsiveText {
+          display: inline-block;
+          color: #F6F9FE;
+      }
+      #gallery {
+          display: flex;
+      }
+      #gallery img {
+          margin: 0;
+          border: 0;
+          max-width: calc(100%/3);
+          max-height: 33vw;
+      }
+      #aboutMe h3 {
+          font-size: 2.5rem;
+      }
+      #mainHeading {
+          font-size: 3vw;
+      }
+      .sectionHeadings {
+          font-size: 2vw;
+          text-align: center;
+          margin-bottom: 10px;
+      }
+      #skillsGrid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          text-align: center;
+      }
+      #skillsGrid div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+      }
+      #skillsGrid ul {
+          color: #F6F9FE;
+      }
+      #projects {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-rows: 1fr;
+      }
+      div.projectRows {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }
+      .projectRows img {
+          width: 20vw;
+      }
+      .flexLayout {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+      }
+      .flexLayout h3 {
+          font-size: 1.5rem;
+      }
+      .footer {
+          padding-left: 30vw;
+          padding-right: 30vw;
+      }
+      .formSection {
+          margin-left: 20vw;
+          width: 60vw;
+      }
+  }
